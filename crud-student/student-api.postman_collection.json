@@ -1,0 +1,71 @@
+{
+  "info": {
+    "name": "Student CRUD API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8081/api/student" }
+  ],
+  "item": [
+    {
+      "name": "1. Create student",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/create",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Ali Khan\",\n  \"age\": 20,\n  \"roll_no\": \"R-01\",\n  \"email\": \"ali@example.com\",\n  \"subject\": \"Computer Science\"\n}",
+          "options": { "raw": { "language": "json" } }
+        }
+      }
+    },
+    {
+      "name": "2. Get all students",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/all"
+      }
+    },
+    {
+      "name": "3. Get student by id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/get?id=1",
+          "host": ["{{baseUrl}}"],
+          "path": ["get"],
+          "query": [{ "key": "id", "value": "1" }]
+        }
+      }
+    },
+    {
+      "name": "4. Update student",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": {
+          "raw": "{{baseUrl}}?id=1",
+          "host": ["{{baseUrl}}"],
+          "query": [{ "key": "id", "value": "1" }]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Ali Khan\",\n  \"age\": 21,\n  \"roll_no\": \"R-01\",\n  \"email\": \"ali.khan@example.com\",\n  \"subject\": \"Software Engineering\"\n}",
+          "options": { "raw": { "language": "json" } }
+        }
+      }
+    },
+    {
+      "name": "5. Delete student",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "{{baseUrl}}?id=1",
+          "host": ["{{baseUrl}}"],
+          "query": [{ "key": "id", "value": "1" }]
+        }
+      }
+    }
+  ]
+}
