@@ -6,7 +6,6 @@ A collection of Java and Spring Boot practice projects.
 |---|---|
 | [crud-student](crud-student) | REST API for creating, reading, updating and deleting students (Spring Boot, Spring Data JPA, MySQL) |
 | [crude-student-exception](crude-student-exception) | Student CRUD API with custom exceptions and a global exception handler (Spring Boot) |
-| [crud-springboot-demo](crud-springboot-demo) | Student CRUD API with request/response DTOs, validation and global error handling (Spring Boot, JPA, MySQL) |
 | [springMVC](springMVC) | Spring MVC basics: controller, entity and repository |
 | [ATM](ATM) | Console ATM simulation in plain Java (OOP: accounts, cash dispenser, balance inquiry) |
 
